@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 2em;
+    color: #fff;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 400px;
+    width: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    width: 100%;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    aspect-ratio: 1;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #f7f7f7;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#status {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+}
+
+/* Overlay styling for win/draw screen */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.5em;
+    display: none;
+}
+
+.overlay-content {
+    text-align: center;
+    background: #333;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.overlay-content button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #0072ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.overlay-content button:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5em;
+    }
+    .cell {
+        font-size: 2em;
+    }
+    button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+}
